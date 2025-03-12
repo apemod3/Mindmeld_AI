@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindmeld AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Mindmeld AI</h1>
+        </header>
+        
+        <main>
+            <div class="prompt-container">
+                <span id="prompt-text"></span>
+                <span class="cursor" id="cursor">|</span>
+            </div>
+            
+            <div id="journal-form">
+                <textarea id="journal-entry" placeholder="Tell me about your day..."></textarea>
+                <button id="submit-entry">Submit</button>
+            </div>
+            
+            <div id="ai-response-container" class="hidden">
+                <div id="ai-response"></div>
+                <button id="new-entry">New Entry</button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
